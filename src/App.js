@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Card } from 'antd';
+import { Typography, Space } from 'antd';
+
 import './App.css';
+
+const { Text, Link } = Typography;
+
+const x1 = 10;
+const x2 = 5;
+
+if (x2 === 0) {
+  throw new Error("Ошибка выполнения")
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <Card title="Решение" bordered={false} style={{ width: 300 }}>
+      <p><Text mark>{x1} / {x2} = {x1 / x2}</Text></p>
+    </Card>
     </div>
   );
 }
